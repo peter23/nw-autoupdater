@@ -10,7 +10,7 @@ const { join  } = require( "path" ),
    */
   async function restartToSwap(extraArgs = []){
     const { execDir, executable, updateDir, backupDir, logPath } = this.options,
-          tpmUserData = join( nw.App.dataPath, "swap" ),
+          tpmUserData = updateDir + '.tmpuserdata',
           app = join( updateDir, executable ),
           args = [ `--user-data-dir=${tpmUserData}`,
             `--swap=${execDir}`, `--bak-dir=${backupDir}` ].concat( extraArgs );
