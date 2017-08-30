@@ -25,7 +25,7 @@ const PKG_NAME = "nw-autoupdater";
 const LOG_FILE = `${PKG_NAME}.log`;
 const UPDATE_DIR = join( os.tmpdir(), PKG_NAME );
 const BACKUP_DIR = IS_OSX ?
-      process.execPath.match(/^([^\0]+?\).app\//)[1]+'.bak.app' : `${EXEC_DIR}.bak`;
+      process.execPath.match(/^([^\0]+?)\.app\//)[1]+'.bak.app' : `${EXEC_DIR}.bak`;
 const LOG_PATH = join( nw.App.dataPath, LOG_FILE );
 
 function getExecutable( name )
